@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ejercicio3;
+package javaapplication6;
 
 /**
  *
  * @author jrv11
  */
-public class Ejercicio3 {
+public class JavaApplication6 {
 
     /**
      * @param args the command line arguments
