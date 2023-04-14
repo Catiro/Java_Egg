@@ -37,15 +37,15 @@ public class Libro {
     
     public void leerLibro(){
               
-        Scanner input = new Scanner(System.in);
+        Scanner leer = new Scanner(System.in);
         System.out.println("Ingrese el Titulo");
-        this.titulo = input.nextLine();
+        this.titulo = leer.nextLine();
         System.out.println("Ingrese el Autor");
-        this.aut = input.nextLine();
+        this.aut = leer.nextLine();
         System.out.println("Ingrese el ISBN");
-        this.isbn = input.nextInt();
+        this.isbn = leer.nextInt();
         System.out.println("Ingrese el Paginas");
-        this.paginas = input.nextInt();
+        this.paginas = leer.nextInt();
 
     
     

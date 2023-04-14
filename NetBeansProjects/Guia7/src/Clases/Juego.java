@@ -22,64 +22,43 @@ public class Juego {
      * número de intentos necesarios para adivinar el número y el número de
      * veces que cada jugador ha ganado.
      */
-    private int num1;
-    private int num2;
-    private int intentos;
+    public int num1;
+    public int num2;
+    public int intentos;
 
     public Juego() {
     }
-
-    public void setNum1(int num1) {
-        this.num1 = num1;
-    }
-
-    public void setNum2(int num2) {
-        this.num2 = num2;
-    }
-
-    public void setIntentos(int intentos) {
-        this.intentos = intentos;
-    }
-    
+  
     public void iniciarJuego(){
         Scanner leer = new Scanner(System.in);
         System.out.println("=======\nPlayer 1 \n=======\n Ingresar el número a adivinar");
-        setNum2(leer.nextInt());
+        num1 = leer.nextInt();
         System.out.println("========\nPlayer 2\n========\nAdivina el número, tienes 4 intentos");
-        setIntentos(0);
+        intentos = 0;
         while (intentos < 5){
             intentos ++;
-            setNum2(leer.nextInt());
+            num2 = leer.nextInt();
             
             if (num2 == num1){
                 System.out.println("==============\nFelicidades Adivinaste\n==============\n");
                 System.out.println("La cantidad de intentos es: " + intentos);
-                
+                break;                
             } 
             if (num2 > num1){
                 System.out.println("El número ingresado es mayor");  
-                System.out.println("Llevas " + intentos + " intentos.\n Vuelve a intentar");
+                System.out.println("Llevas " + intentos + " intentos.\n");
+                System.out.println("");
             }
             if (num2 < num1){
-                System.out.println("El número ingresado es menor\n Vuelve a intentar");
+                System.out.println("El número ingresado es menor");
                 System.out.println("Llevas " + intentos + " intentos.\n Vuelve a intentar");
+                System.out.println("");
             }
             if (intentos == 4){
                System.out.println("Este fue tu ultimo intento"); 
             }
         }
+        System.out.println("GAME OVER");
         
-    }
-
-    public int getNum1() {
-        return num1;
-    }
-
-    public int getNum2() {
-        return num2;
-    }
-
-    public int getIntentos() {
-        return intentos;
     }
 }
