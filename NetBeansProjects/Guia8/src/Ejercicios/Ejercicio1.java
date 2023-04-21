@@ -21,6 +21,12 @@ public class Ejercicio1 {
         // TODO code application logic here
         CuentaBancariaServicio sv = new CuentaBancariaServicio();
         CuentaBancaria cm = sv.crearCuentaBancaria();
+        sv.ingresar(cm);
+        sv.retirar(cm);
+        sv.extraccionRapida(cm);
+        System.out.println("El saldo de la Actual de la cuenta es: " + sv.consultarSaldo(cm));
+        sv.consultarDatos(cm);
+        
     }
     
 }
