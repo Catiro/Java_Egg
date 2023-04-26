@@ -13,11 +13,14 @@ import java.util.Scanner;
  */
 public class CafeteraServicio {
     Scanner leer = new Scanner(System.in);
-    private Cafetera c2;
+    Cafetera c2 = new Cafetera();
+    //private Cafetera c2;
     
     // a) Método llenarCafetera(): hace que la cantidad actual sea igual a la capacidad máxima.
-    public void llenarCafetera(int actual, int capacidad){
-        c2.setCantidadActual(c2.getCapacidadMáxima());
+    public void llenarCafetera(double capacidad){
+        
+        c2.setCapacidadMáxima(capacidad);
+        c2.setCantidadActual(capacidad);
         
     }
     /**Método servirTaza(int): se pide el tamaño de una taza vacía, el método
@@ -28,7 +31,7 @@ public class CafeteraServicio {
      * taza.
      */
     
-    public void servirTaza(int tamanoTaza){
+    public void servirTaza(double tamanoTaza){
         
         if(c2.getCantidadActual()<tamanoTaza){
              System.out.println("No se pudo llenar la taza completamente, quedó con " + c2.getCantidadActual() + " ml de café.");
@@ -48,7 +51,7 @@ public class CafeteraServicio {
      * método lo recibe y se añade a la cafetera la cantidad de café indicada.
      */
      
-     public void agregarCafe(int sumarCafe){
+     public void agregarCafe(double sumarCafe){
          if (c2.getCantidadActual() + sumarCafe > c2.getCapacidadMáxima()){
              System.out.println("NO se puede ingresar la cantidad de cafe debido a que supera la capacidad");  
          } else{
