@@ -4,7 +4,9 @@
  */
 package Ejercicios;
 
+import Clases.Raices;
 import Servicios.RaicesServicio;
+import java.util.Scanner;
 
 /**
  *
@@ -24,7 +26,16 @@ public class EjercicioExtra1 {
          * Luego, en RaicesServicio las operaciones que se podrán realizar son
          * las siguientes: 
          */
+        Scanner leer = new Scanner(System.in);
         RaicesServicio rS = new RaicesServicio();
+        System.out.println("Ingrese el valor de a, b, c");
+        int a, b, c;
+        a = leer.nextInt();
+        b = leer.nextInt();
+        c = leer.nextInt();
+        Raices raiz = new Raices(a,b,c);
+        
+        rS.calcular(raiz);
         
         
     }
