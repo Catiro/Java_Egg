@@ -117,8 +117,25 @@ public class CadenaService {
          System.out.println("");               
     }
      
-     /**
-      * 
-      */
+     /**Método contiene(String letra), deberá comprobar si la frase contiene una
+     * letra que ingresa el usuario y devuelve verdadero si la contiene y falso
+     * si no.
+     */
+      public void contiene(Cadena c1){
+      int j = 0;
+       System.out.println("Ingrese la letra que desea buscar: ");
+        String letra = leer.next().toLowerCase();
+        String letra1;
+        for (int i = 0; i < c1.getLongitud(); i++) {            
+            letra1 = substring(c1.getFrase(),i,i+1).toLowerCase();
+            if (letra1.equals(letra)){
+                j++;            
+            }
+        }
+        boolean aux;
+        aux = j!=0;
+          System.out.println(aux);
+      }
+     
      
 }// end

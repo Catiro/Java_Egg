@@ -34,6 +34,7 @@ public class Ejercicio1 {
         cadenaService.compararLongitud(cadena);
         cadenaService.unirFrases(cadena);
         cadenaService.reemplazar(cadena);
+        cadenaService.contiene(cadena);
         
     }
     
