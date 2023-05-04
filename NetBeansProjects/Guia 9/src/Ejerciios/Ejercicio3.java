@@ -26,15 +26,15 @@ Método inicializarB copia los primeros 10 números del arreglo A en el arreglo 
 En el Main nuevamente: inicializar A, mostrar A, ordenar A, inicializar B, mostrar A y B.
 
          */
-        ArrayService arService = new ArrayService();
+        
         int[] array1 = new int[50];
         int[] array2 = new int[20];
-        array1 = arService.inicializarA(array1);
-        arService.mostrar(array1);
-        arService.ordenar(array1);
-        array2 = arService.inicializarB(array1);
-        arService.mostrar(array1);
-        arService.mostrar(array2);
+        array1 = ArrayService.inicializarA(array1);
+        ArrayService.mostrar(array1);
+        ArrayService.ordenar(array1);
+        array2 = ArrayService.inicializarB(array1);
+        ArrayService.mostrar(array1);
+        ArrayService.mostrar(array2);
     }
     
 }
