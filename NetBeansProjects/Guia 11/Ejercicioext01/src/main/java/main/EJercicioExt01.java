@@ -4,15 +4,13 @@
 
 package main;
 
-import Endidad1.Perro;
-import Endidad1.Persona;
-import java.util.ArrayList;
+import Servicie.perreraService;
 
 /**
  *
  * @author jrv11
  */
-public class Ejercicio01 {
+public class EJercicioExt01 {
 
     public static void main(String[] args) {
         /**Ahora se debe realizar unas mejoras al ejercicio de Perro y Persona.
@@ -24,26 +22,10 @@ public class Ejercicio01 {
          * se le asigna, al final deberemos mostrar todas las personas con sus
          * respectivos perros.
          */
-         ArrayList<Persona> adoptantes = new ArrayList<>();
-
-        Persona adoptante1 = new Persona("Elias", "Barreto", 25, 40597490, null);
-        Persona adoptante2 = new Persona("Gonzalo", "Pizarro", 35, 37286893, null);
-
-        Perro perrito1 = new Perro("Lassie", "Collie", 3, "grande");
-        Perro perrito2 = new Perro("Hachie", "Hakita", 6, "mediano");
-
-        adoptante1.setPerroAdoptado(perrito2);
-        adoptante2.setPerroAdoptado(perrito1);
-        
-        adoptantes.add(adoptante1);
-        adoptantes.add(adoptante2);
-      
-        
-        for (Persona adopcion : adoptantes)
-        {
-            System.out.println(  adopcion.toString());
-            
-        }
-        
+     perreraService p1 = new perreraService();
+     
+     p1.cargarPersonasYPerros();
+     p1.adopcionPerros();
+     p1.mostrarPersonas();
     }
 }

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="main.java.Entidad">
+  <ClassDiagramComponents>
+    <Class name="Animal" package="Entidad" visibility="public" xPosition="525.0" yPosition="32.0">
+      <Fields>
+        <Field name="ruido" type="String" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="ruido"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="hacerRuido" returnType="void" visibility="public"/>
+        <Method name="getRuido" returnType="String" visibility="public"/>
+        <Method name="setRuido" returnType="void" visibility="public">
+          <Argument type="String" name="ruido"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Gato" package="Entidad" visibility="public" xPosition="315.0" yPosition="337.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="hacerRuido" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Perro" package="Entidad" visibility="public" xPosition="759.0" yPosition="337.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="hacerRuido" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="Entidad.Gato" target="Entidad.Animal"/>
+    <IsRelation name="is" source="Entidad.Perro" target="Entidad.Animal"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
